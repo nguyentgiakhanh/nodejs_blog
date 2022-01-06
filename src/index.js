@@ -5,6 +5,10 @@ const route = require('./routes');
 const path = require('path')
 const app = express()
 const port = 3000
+const db = require('./config/db/db')
+
+// Connect db
+db.connect();
 
 // HTTP logger
 app.use(morgan('combined'))
